@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>
+		Sortare prin selectie 
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Sortare prin selectie </h1>
+<pre>
+
+#include <iostream>
+using namespace std;
+int main() {
+	int n, i, j, aux, a[1001];
+	cin >> n;
+	for(i = 1; i <= n; i++)
+		cin >> a[i];
+	for(i = 1; i < n; i++)
+		for(j = i + 1; j <= n; j++){
+			if(a[i] > a[j]){
+				aux = a[i];
+				a[i] = a[j];
+				a[j] = aux;
+			}
+		}
+	for(i = 1; i <= n; i++)
+		cout << a[i] << " ";
+	return 0;
+}
+
+</pre>
+</body>
+</html>

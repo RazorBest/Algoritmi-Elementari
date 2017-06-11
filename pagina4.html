@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>
+		Determinarea numarului de cifre
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Determinarea numarului de cifre	</h1>
+<pre>
+#include <iostream>     
+using namespace std;     
+int main() {     
+	int n, nr;     
+	cin >> n;     
+	while(n != 0){    
+		nr++; 
+		n = n / 10; 
+	}	
+	cout << nr << " ";
+	return 0;
+}
+
+</pre>
+</body>
+</html>

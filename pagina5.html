@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>
+		Palindromitatea unui numar
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Palindromitatea unui numar</h1>
+<pre>
+#include <iostream>   
+using namespace std;  
+int main() {    
+	int n, copie, ogl = 0, c;    
+	cin >> n;    
+	copie = n;    
+	while(n != 0){    
+		c = n % 10;
+		ogl = ogl * 10 + c;
+		n = n / 10;
+	}
+	if(copie == ogl)
+		cout<< "Este palindrom.";
+	else
+		cout<< "Nu este palindrom.";
+	return 0;
+}
+
+</pre>
+</body>
+</html>

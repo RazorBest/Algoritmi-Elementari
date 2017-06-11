@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>
+		Interclasarea a doua siruri ordonate
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Interclasarea a doua siruri ordonate</h1>
+<pre>
+#include <iostream>
+using namespace std;
+void citire(int[100], int);
+void interc(int[100], int, int[100], int, int[200]);
+void afisare(int[200], int);
+int n, m, k;
+int main() {
+	int a[100], b[100], c[200], i, j;
+	citire(a, n);
+	citire(b, m);
+	interc(a, n, b, m, c);
+	afisare(c, k);
+	return 0;
+}
+void citire(int x[100], int p) {
+	cin >> p;
+	for(i = 0; i < p; i++)
+		cin >> x[i] >> " ";
+}
+void afisare(int c[200], int k) {
+	for(int i = 0; i < k; i++)
+	cout << c[i] << " ";
+}
+void interc(int a[100], int n, int b[100], int m, int c[200]) {
+	int i, j;
+	i = j = k = 0;
+	while(i < n && j < m)
+		if(a[i] < b[j])
+			c[k++] = a[i++];
+		else
+			c[k++] = b[j++];
+	if(i < n)
+		while(i < n)
+			c[k++] = a[i++];
+	else if(j < m)
+		while(j < m)
+			c[k++] = b[j++];
+}
+
+</pre>
+</body>
+</html>

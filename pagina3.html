@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>
+		Suma cifrelor unui numar
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Suma cifrelor unui numar</h1>
+<pre>
+#include <iostream>     
+using namespace std;
+int main() {
+	int n, s = 0;     	
+	cin >> n;     
+	while(n != 0) {
+		s = s + n % 10; 
+		n = n / 10;
+	} 
+	cout << s << " "; 
+	return 0; 
+} 
+
+</pre>
+</body>
+</html>

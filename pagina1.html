@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>
+		Cel mai mare divizor comun (CMMDC)
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Cel mai mare divizor comun (CMMDC)</h1>
+<h3>Prin metoda lui Euclid:</h3> 
+<pre>
+#include <iostream>     
+using namespace std;
+int main() {     
+	int a, b, r;     
+	cin >> a >> b;    
+	while(b != 0){     
+		r = a % b; 
+		a = b; 
+		b = r;
+	} 
+	cout << a << " ";
+	return 0;
+} 	
+</pre>
+<h3>Prin scadere:</h3>
+<pre>
+#include <iostream>
+using namespace std;
+int main() {
+	int a, b;
+	cin >> a >> b;
+	if(a == 0) cout << b;
+	if(b == 0) cout << a;
+	else { 
+		while(a != b)
+			if(a > b) a = a - b;
+			else b = b - a;
+	}
+	cout << a << " ";
+	return 0;
+}
+</pre>
+</body>
+</html>

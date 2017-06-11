@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>
+		Cel mai mic multiplu comun (CMMMC)
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Cel mai mic multiplu comun (CMMMC)</h1>
+<pre>
+#include <iostream>      
+using namespace std;     
+int main() {     
+	int a, b, r;     	
+	cin >> a >> b;     
+	int p;     
+	p = a * b;     
+	while(b != 0){     
+		r = a % b;
+		a = b;
+		b = r; 
+	} 
+	cout << p / a; 
+	return 0;
+} 
+
+</pre>
+</body>
+</html>

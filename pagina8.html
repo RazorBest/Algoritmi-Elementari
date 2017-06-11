@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>
+		Cautarea binara
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Cautarea binara</h1>
+<pre>
+
+#include <iostream>    
+using namespace std;    
+int n, a[100], x;    
+void citire();    
+int cautbin();    
+int main() {    
+	citire();    
+	int nr = cautbin;
+	if(nr == 1)
+		cout << "Nu exista.";
+	else cout << nr;
+	return 0;
+} 
+void citire() {
+	cin >> n;
+	for(i = 0; i < n; i++)
+		cin >> a[i] >> " ";	
+	cin >> x; 
+} 
+cautbin() {
+	int mij, st = 0;
+	dr = n - 1;
+	while(st < dr) {
+		mij = (st + dr) / 2;
+		if(x == a[mij])
+			return mij;
+		if(x < a[mij])
+			dr = mij - 1;
+		else
+			st = mij + 1;
+	}
+}
+
+</pre>
+</body>
+</html>

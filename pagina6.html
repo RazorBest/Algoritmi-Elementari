@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>
+		Primalitatea unui numar
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Primalitatea unui numar</h1>
+<pre>
+#include <iostream>    
+using namespace std;    
+int main() {    
+	int n, prim = 1;    
+	cin >> n;    
+	if(n < 2) prim = 0;    
+	if(n != 2 && n % 2 == 0) prim = 0;    
+	for(int d = 3; d * d <= n; d+=2)
+		if(n % d == 0) prim = 0;
+	if(prim)
+		cout<< "Este numar prim.";
+	else
+		cout<< "Nu este numar prim.";
+	return 0;
+}
+
+</pre>
+</body>
+</html>

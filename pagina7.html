@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>
+		Descompunerea in factori primi
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Descompunerea in factori primi</h1>
+<pre>
+#include <iostream>  
+using namespace std;
+int main() {    
+	int n, d = 2;    
+	cin >> n;   
+	int exp;
+	while(x > 1) {    
+		exp = 0;
+		while(x % d == 0) {
+			x = x / d;
+			exp++;
+		}
+		if(exp != 0)
+			cout << d << " " << exp << '\n';
+		d++;
+	}
+	return 0;
+} 
+</pre>
+</body>
+</html>

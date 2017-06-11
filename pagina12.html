@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>
+		Sortare prin numarare
+	</title>
+</head>
+<style>
+pre{
+font-family:courier;}
+</style>
+
+<body>
+	<h1>Sortare prin numarare</h1>
+<pre>
+#include <iostream>
+using namespace std;
+int b[1001];
+int main() {
+	int n, i, a[1001], c[1001], j;
+	cin >> n;
+	for(i = 1; i <= n; i++)
+		cin >> a[i];
+	for(i = 1; i < n; i++)
+		for(j = i + 1; j <= n; j++)
+			if(a[i] < a[j])
+				b[j]++;
+			else
+				b[i]++;
+	for(i = 1; i <= n; i++)
+		c[b[i] + 1] = a[i];
+	for(i = 1; i <= n; i++)
+		cout << a[i] << " ";
+	return 0;
+}
+
+</pre>
+</body>
+</html>
